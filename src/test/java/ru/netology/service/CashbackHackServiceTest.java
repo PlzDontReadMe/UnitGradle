@@ -1,9 +1,9 @@
 package ru.netology.service;
-import org.testng.annotations.Test;
-import static org.testng.AssertJUnit.assertEquals;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-class CashbackHackServiceTest {
 
+public class CashbackHackServiceTest {
 
     @Test
     public void shouldRemainOfMin(){
@@ -12,7 +12,7 @@ class CashbackHackServiceTest {
         int expected = 999;
         int actual = result.remain(1);
 
-        assertEquals(actual,expected);
+        assertEquals(expected,actual);
     }
     @Test
     public void shouldRemainOfMax(){
@@ -21,7 +21,7 @@ class CashbackHackServiceTest {
         int expected = 1;
         int actual = result.remain(999);
 
-        assertEquals(actual,expected);
+        assertEquals(expected,actual);
     }
     @Test
     public void shouldRemainOfFull(){
@@ -30,7 +30,7 @@ class CashbackHackServiceTest {
         int expected = 0;
         int actual = result.remain(1000);
 
-        assertEquals(actual,expected);
+        assertEquals(expected,actual);
     }
 
 }
