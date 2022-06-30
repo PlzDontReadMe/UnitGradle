@@ -1,8 +1,6 @@
 package ru.netology.service;
-
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.testng.annotations.Test;
+import static org.testng.AssertJUnit.assertEquals;
 
 class CashbackHackServiceTest {
 
@@ -14,7 +12,7 @@ class CashbackHackServiceTest {
         int expected = 999;
         int actual = result.remain(1);
 
-        assertEquals(expected,actual);
+        assertEquals(actual,expected);
     }
     @Test
     public void shouldRemainOfMax(){
@@ -23,7 +21,7 @@ class CashbackHackServiceTest {
         int expected = 1;
         int actual = result.remain(999);
 
-        assertEquals(expected,actual);
+        assertEquals(actual,expected);
     }
     @Test
     public void shouldRemainOfFull(){
@@ -32,7 +30,7 @@ class CashbackHackServiceTest {
         int expected = 0;
         int actual = result.remain(1000);
 
-        assertEquals(expected,actual);
+        assertEquals(actual,expected);
     }
 
 }
